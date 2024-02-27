@@ -1,0 +1,234 @@
+body {
+    background-color: #dcdcdc;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:#EAC926 ;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 200px; /* Tamaño de tu logo */
+}
+.delivery-icon {
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 40px; /* Ancho del contenedor del ícono */
+    height: 40px; /* Altura del contenedor del ícono */
+    border-radius: 50%; /* Borde redondeado para hacer un aro */
+    background-color: rgb(10, 237, 10); /* Color del aro */
+    text-align: center;
+    line-height: 40px; /* Para centrar verticalmente el ícono */
+    display: inline-flex; /* Para que el contenedor se ajuste al contenido */
+    align-items: center; /* Para alinear verticalmente el ícono */
+    justify-content: center; /* Para alinear horizontalmente el ícono */
+}
+
+.delivery-icon i {
+    color: rgb(0, 246, 0); /* Color del ícono */
+}
+.product-info-box{
+    position: relative;
+}
+.precios-descuentos{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.descuentos{
+    width:70%;
+    color: #39b54a;
+}
+.precios{
+    width: 30%;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.product-desc-box > .product-delivery-icon{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+.product-desc-box {
+    position: relative;
+    }
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+
+.search-bar i {
+    margin-left: 5px;
+}
+
+.header-nav {
+    color: gray;
+    padding: 20px;
+    margin: 0;
+    padding-left: 0;
+    justify-content: space-around;
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    margin-top: 200px;
+
+}
+
+.header-nav li {
+    display: inline;
+    flex-direction: row;
+    align-items:start;
+    margin-right: 20px;
+}
+.nav-ul-li-a{
+    display: inline;
+    margin-right: 20px;
+    margin-left: auto;
+}
+.nav-ul-li i,
+.nav-ul-li-a i {
+    margin-right: 5px;
+}
+.burger-menu {
+    display: block;
+    text-align: center; /* Para centrar horizontalmente */
+    padding: 20px;
+    background-color: blue; /* Color azul para el burger menu */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+
+main {
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.producto {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 10px;
+    border-top: 1px solid #ebebeb;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    justify-content: end;
+}
+
+.producto img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-info {
+    margin-left: 15px;
+    flex-grow: 1;
+}
+.product-info-box {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto .descripcion {
+    font-weight: bold; /* Texto de la descripción en negrita */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+.producto .precio, .producto .descuento {
+    color: #333; /* Color del texto */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+.footer-h1,
+.footer-p {
+    text-align: center;
+}
+/* Punto de corte para tablets y desktop */
+@media only screen and (min-width: 361px) {
+    /* Navegación */
+    .header-nav {
+        display: flex; /* Mostrar la navegación */
+    }
+    
+    .burger-menu {
+        display: none; /* Ocultar el menú hamburguesa */
+    }
+    
+    .header-img {
+        display: none; /* Ocultar la imagen del header */
+    }
+
+    /* Box-shadow */
+    .producto {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100); /* Aplicar box-shadow */
+        
+    }
+}
+
+/* Punto de corte para mobile */
+@media only screen and (max-width: 360px) {
+    /* Ocultar site y login navbar */
+    .header-nav {
+        display: none;
+    }
+    
+    .header-img {
+        display: none;
+    }
+}
+
+/* Punto de corte para diferentes columnas de productos */
+/* Para mobile */
+@media only screen and (max-width: 768px) {
+    .producto {
+        display:flex;
+        flex-wrap: wrap
+    }
+}
+
+/* Para tablet */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .producto {
+        display:flex;
+        flex-wrap: wrap
+
+    }
+}
+
+/* Para desktop */
+@media only screen and (min-width: 1024px) {
+    .producto {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
