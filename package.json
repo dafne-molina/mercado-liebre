@@ -1,12 +1,17 @@
 {
-    "name": "nombre-del-proyecto",
+    "name": "mercado liebre",
     "version": "1.0.0",
-    "description": "Descripción del proyecto",
+    "description": "",
     "main": "app.js",
     "scripts": {
+        "test": "nodemon app.js",
         "start": "node app.js"
     },
+    "keywords": [],
+    "author": "",
+    "license":"ISC",
     "dependencies": {
-        "express": "^4.18.2"
+        "express": "^4.18.2",
+        "nodemon": "^3.1.0"
     }
 }
